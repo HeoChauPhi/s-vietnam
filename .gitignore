@@ -1,0 +1,7 @@
+# @TODO writable paths
+wp-content/cache/
+
+# SASS #
+##########
+.sass-cache
+prepros-6.config

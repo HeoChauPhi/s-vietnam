@@ -1,0 +1,35 @@
+.custom-browser-detected {
+  background-color: #fff;
+  bottom: 0;
+  box-shadow: 0 -2px 5px 0 #ccc;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+}
+
+.custom-browser-body {
+  padding: 20px;
+  position: relative;
+}
+
+.custom-browser-close {
+  background-color: #fff;
+  border-radius: 100px 100px 0 0;
+  bottom: 100%;
+  box-shadow: 0 -2px 5px 0 #ccc;
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: 700;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 40px;
+}
+
+.custom-browser-content {
+  font-size: 20px;
+  padding: 0 10%;
+  text-align: center;
+}
