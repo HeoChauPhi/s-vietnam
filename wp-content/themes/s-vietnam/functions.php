@@ -74,19 +74,19 @@ add_action('admin_init', 'ct_admin_styles');
  */
 function s_vietnam_create_custom_post_types() {
   // Programs
-  register_post_type( 'program', array(
+  register_post_type( 'hotel', array(
     'labels' => array(
-      'name' => __( 'Programs', 's_vietnam_theme' ),
-      'singular_name' => __( 'Program', 's_vietnam_theme' )
+      'name' => __( 'Hotel', 's_vietnam_theme' ),
+      'singular_name' => __( 'Hotel', 's_vietnam_theme' )
     ),
     'public' => true,
     'has_archive' => false,
     'menu_position' => 28,
-    'rewrite' => array('slug' => 'program'),
-    'supports' => array( 'title', 'editor', 'thumbnail' ),
+    'rewrite' => array('slug' => 'hotel'),
+    'supports' => array( 'title', 'editor' ),
   ));
 }
-//add_action( 'init', 's_vietnam_create_custom_post_types' );
+add_action( 'init', 's_vietnam_create_custom_post_types' );
 
 /*
  *
