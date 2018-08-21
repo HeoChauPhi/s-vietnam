@@ -73,7 +73,7 @@ add_action('admin_init', 'ct_admin_styles');
  *
  */
 function s_vietnam_create_custom_post_types() {
-  // Programs
+  // Hotel
   register_post_type( 'hotel', array(
     'labels' => array(
       'name' => __( 'Hotel', 's_vietnam_theme' ),
@@ -84,6 +84,16 @@ function s_vietnam_create_custom_post_types() {
     'menu_position' => 28,
     'rewrite' => array('slug' => 'hotel'),
     'supports' => array( 'title', 'editor' ),
+    'capabilities' => array(
+      'create_posts' => 'create_hotel',
+      'delete_posts' => 'delete_hotel',
+      'delete_private_posts' => 'delete_published_hotel',
+      'edit_posts' => 'edit_hotel',
+      'edit_published_posts' => 'edit_published_hotel',
+      'publish_posts' => 'publish_hotel',
+    ),
+    // as pointed out by iEmanuele, adding map_meta_cap will map the meta correctly 
+    'map_meta_cap' => true
   ));
 }
 add_action( 'init', 's_vietnam_create_custom_post_types' );
@@ -112,6 +122,28 @@ function s_vietnam_create_custom_taxonomy() {
   register_taxonomy('subsite_taxonomy', array('program'), $args_subsite);
 }
 //add_action( 'init', 's_vietnam_create_custom_taxonomy', 0 );
+
+/*
+ *
+ * Custom Role Pẻmission
+ *
+ */
+function s_vietnam_caps() {
+  // gets the administrator role
+  $roles = array('administrator', 'contributor', 'seller');
+
+  foreach ($roles as $role_slug) {
+    $role = get_role( $role_slug );
+
+    $role->add_cap( 'create_hotel' );
+    $role->add_cap( 'delete_hotel' );
+    $role->add_cap( 'delete_published_hotel' );
+    $role->add_cap( 'edit_hotel' );
+    $role->add_cap( 'edit_published_hotel' );
+    $role->add_cap( 'publish_hotel' );
+  } 
+}
+//add_action( 'admin_init', 's_vietnam_caps');
 
 /*
  *
