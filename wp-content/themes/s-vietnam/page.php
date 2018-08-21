@@ -26,11 +26,4 @@ $post = new TimberPost();
 $context['post'] = $post;
 $context['title_option'] = framework_page('title');
 
-//Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig'), $context );
-
-$admin_role = get_role( 'administrator' );
-$contributor_role = get_role( 'contributor' );
-$seller_role = get_role( 'seller' );
-//print_r($admin_role);
-print_r($contributor_role);
-print_r($seller_role);
+Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig'), $context );

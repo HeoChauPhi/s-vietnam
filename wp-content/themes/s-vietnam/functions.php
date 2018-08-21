@@ -76,21 +76,110 @@ function s_vietnam_create_custom_post_types() {
   // Hotel
   register_post_type( 'hotel', array(
     'labels' => array(
-      'name' => __( 'Hotel', 's_vietnam_theme' ),
-      'singular_name' => __( 'Hotel', 's_vietnam_theme' )
+      'name'               => _x( 'Hotels', 'post type general name', 's_vietnam_theme' ),
+      'singular_name'      => _x( 'Hotel', 'post type singular name', 's_vietnam_theme' ),
+      'menu_name'          => _x( 'Hotels', 'admin menu', 's_vietnam_theme' ),
+      'name_admin_bar'     => _x( 'Hotel', 'add new on admin bar', 's_vietnam_theme' ),
+      'add_new'            => _x( 'Add New', 'hotel', 's_vietnam_theme' ),
+      'add_new_item'       => __( 'Add New Hotel', 's_vietnam_theme' ),
+      'new_item'           => __( 'New Hotel', 's_vietnam_theme' ),
+      'edit_item'          => __( 'Edit Hotel', 's_vietnam_theme' ),
+      'view_item'          => __( 'View Hotel', 's_vietnam_theme' ),
+      'all_items'          => __( 'All Hotels', 's_vietnam_theme' ),
+      'search_items'       => __( 'Search Hotels', 's_vietnam_theme' ),
+      'parent_item_colon'  => __( 'Parent Hotels:', 's_vietnam_theme' ),
+      'not_found'          => __( 'No hotels found.', 's_vietnam_theme' ),
+      'not_found_in_trash' => __( 'No hotels found in Trash.', 's_vietnam_theme' )
     ),
-    'public' => true,
-    'has_archive' => false,
-    'menu_position' => 28,
-    'rewrite' => array('slug' => 'hotel'),
-    'supports' => array( 'title', 'editor' ),
-    'capabilities' => array(
-      'create_posts' => 'create_hotel',
-      'delete_posts' => 'delete_hotel',
-      'delete_private_posts' => 'delete_published_hotel',
-      'edit_posts' => 'edit_hotel',
-      'edit_published_posts' => 'edit_published_hotel',
-      'publish_posts' => 'publish_hotel',
+    'description'           => __( 'Description.', 's_vietnam_theme' ),
+    'public'                => true,
+    'publicly_queryable'    => true,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'query_var'             => true,
+    'rewrite'               => array('slug' => 'hotel'),
+    'has_archive'           => true,
+    'hierarchical'          => false,
+    'menu_position'         => 28,
+    'supports'              => array( 'title', 'editor' ),
+    'capabilities'          => array(
+      // Meta capabilities
+
+      'edit_post'               => "edit_hotel",
+      'read_post'               => "read_hotel",
+      'delete_post'             => "delete_hotel",
+
+      'edit_posts'              => "edit_hotels",
+      'edit_others_posts'       => "edit_others_hotels",
+      'publish_posts'           => "publish_hotels",
+      'read_private_posts'      => "read_private_hotels",
+
+      // Primitive capabilities used within map_meta_cap():
+
+      'read'                    => "read",
+      'delete_posts'            => "delete_hotels",
+      'delete_private_posts'    => "delete_private_hotels",
+      'delete_published_posts'  => "delete_published_hotels",
+      'delete_others_posts'     => "delete_others_hotels",
+      'edit_private_posts'      => "edit_private_hotels",
+      'edit_published_posts'    => "edit_published_hotels",
+      'create_posts'            => "edit_hotels",
+    ),
+    // as pointed out by iEmanuele, adding map_meta_cap will map the meta correctly 
+    'map_meta_cap' => true
+  ));
+
+  // Tour
+  register_post_type( 'tour', array(
+    'labels' => array(
+      'name'               => _x( 'Tours', 'post type general name', 's_vietnam_theme' ),
+      'singular_name'      => _x( 'Tour', 'post type singular name', 's_vietnam_theme' ),
+      'menu_name'          => _x( 'Tours', 'admin menu', 's_vietnam_theme' ),
+      'name_admin_bar'     => _x( 'Tour', 'add new on admin bar', 's_vietnam_theme' ),
+      'add_new'            => _x( 'Add New', 'hotel', 's_vietnam_theme' ),
+      'add_new_item'       => __( 'Add New Tour', 's_vietnam_theme' ),
+      'new_item'           => __( 'New Tour', 's_vietnam_theme' ),
+      'edit_item'          => __( 'Edit Tour', 's_vietnam_theme' ),
+      'view_item'          => __( 'View Tour', 's_vietnam_theme' ),
+      'all_items'          => __( 'All Tours', 's_vietnam_theme' ),
+      'search_items'       => __( 'Search Tours', 's_vietnam_theme' ),
+      'parent_item_colon'  => __( 'Parent Tours:', 's_vietnam_theme' ),
+      'not_found'          => __( 'No tours found.', 's_vietnam_theme' ),
+      'not_found_in_trash' => __( 'No tours found in Trash.', 's_vietnam_theme' )
+    ),
+    'description'           => __( 'Description.', 's_vietnam_theme' ),
+    'public'                => true,
+    'publicly_queryable'    => true,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'query_var'             => true,
+    'rewrite'               => array('slug' => 'tour'),
+    'has_archive'           => true,
+    'hierarchical'          => false,
+    'menu_position'         => 28,
+    'supports'              => array( 'title', 'editor' ),
+    'capabilities'          => array(
+      // Meta capabilities
+
+      'edit_post'               => "edit_tour",
+      'read_post'               => "read_tour",
+      'delete_post'             => "delete_tour",
+
+      'edit_posts'              => "edit_tours",
+      'edit_others_posts'       => "edit_others_tours",
+      'publish_posts'           => "publish_tours",
+      'read_private_posts'      => "read_private_tours",
+
+      // Primitive capabilities used within map_meta_cap():
+
+      'read'                    => "read",
+      'delete_posts'            => "delete_tours",
+      'delete_private_posts'    => "delete_private_tours",
+      'delete_published_posts'  => "delete_published_tours",
+      'delete_others_posts'     => "delete_others_tours",
+      'edit_private_posts'      => "edit_private_tours",
+      'edit_published_posts'    => "edit_published_tours",
+      'create_posts'            => "edit_tours",
     ),
     // as pointed out by iEmanuele, adding map_meta_cap will map the meta correctly 
     'map_meta_cap' => true
