@@ -1,0 +1,5 @@
+{% if forms_type.value == 'add_hotel' %}
+  {% include user_role.value ~ '-add-hotel-form.twig' %}
+{% else %}
+  {% include user_role.value ~ '-add-tour-form.twig' %}
+{% endif %}

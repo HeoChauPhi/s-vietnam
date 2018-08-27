@@ -18,12 +18,95 @@
             "layouts": {
                 "591d6cd72179a": {
                     "key": "591d6cd72179a",
+                    "name": "user_role_forms",
+                    "label": "User Role Forms",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b8374a5e2567",
+                            "label": "User Role",
+                            "name": "user_role",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "seller": "Seller",
+                                "contributor": "Contributor"
+                            },
+                            "default_value": [
+                                "seller"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1,
+                            "ajax": 0,
+                            "return_format": "array",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5b83730adae77",
+                            "label": "Forms Type",
+                            "name": "forms_type",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "add_hotel": "Add Hotel",
+                                "add_tour": "Add Tour"
+                            },
+                            "default_value": [
+                                "add_hotel"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1,
+                            "ajax": 0,
+                            "return_format": "array",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_591d6cd7217a3",
+                            "label": "Component Class",
+                            "name": "component_class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5b8372f2dae72": {
+                    "key": "layout_5b8372f2dae72",
                     "name": "map_block",
                     "label": "Map Block",
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_591d6cd72179b",
+                            "key": "field_5b8372f2dae73",
                             "label": "Map Title",
                             "name": "map_title",
                             "type": "text",
@@ -42,7 +125,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_591d6d25217a4",
+                            "key": "field_5b8372f3dae74",
                             "label": "Map Description",
                             "name": "map_description",
                             "type": "textarea",
@@ -61,7 +144,7 @@
                             "new_lines": ""
                         },
                         {
-                            "key": "field_591d6d3e217a5",
+                            "key": "field_5b8372f3dae75",
                             "label": "Map Embed",
                             "name": "map_embed",
                             "type": "google_map",
@@ -79,7 +162,7 @@
                             "height": 300
                         },
                         {
-                            "key": "field_591d6cd7217a3",
+                            "key": "field_5b8372f3dae76",
                             "label": "Component Class",
                             "name": "component_class",
                             "type": "text",
@@ -124,5 +207,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1534394995
+    "modified": 1535341865
 }

@@ -4,7 +4,7 @@
 (function($) {
 
   $(document).ready(function() {
-    $('.ajax-pagination .pager-item a').on('click', pagination_ajax);
+    // Call to function
   });
 
   $(window).load(function() {
