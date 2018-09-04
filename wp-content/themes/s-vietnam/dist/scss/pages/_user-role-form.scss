@@ -1,0 +1,38 @@
+form.user-role-form {
+  .form-item {
+    overflow: hidden;
+  }
+
+  // Form media
+  .wrapper-more-media {
+    position: relative;
+  }
+
+  .media-sortable { 
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+
+    li {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      float: left;
+      height: rem(100px);
+      margin: rem(3px 3px 3px 0);
+      position: relative;
+      width: rem(100px);
+
+      .media-delete-icon {
+        color: $black;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        font-size: 21px;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,13 +1,12 @@
 {% block header %}
   <header id="header" class="header">
-    <div class="container-wide">
+    <div class="container">
       <div class="header__left">
         <div class="header__logo">
           {#{function('the_custom_logo')}#}
           <a href="{{ site.url }}" class="logo">
-              <img alt="{{ site.name }}" src="{{ site_logo }}" alt="{{ site.name }}">
+            <img alt="{{ site.name }}" src="{{ site_logo }}" alt="{{ site.name }}">
           </a>
-          <a href="{{ site.url }}" class="logo logo__scroll"><img src={{ site_logo_scroll }}></a>
         </div>
       </div>
 
