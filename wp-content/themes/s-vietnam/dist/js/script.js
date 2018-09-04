@@ -2,9 +2,10 @@
 /*global $, jQuery, Modernizr, enquire, audiojs*/
 
 (function($) {
-
   $(document).ready(function() {
     // Call to function
+    $( ".media-sortable" ).sortable();
+    $( ".media-sortable" ).disableSelection();
   });
 
   $(window).load(function() {

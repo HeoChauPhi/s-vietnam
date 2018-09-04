@@ -8,7 +8,7 @@ use Timber\Menu;
 require_once dirname( __FILE__ ) . '/theme-support.php';
 
 // Get custom function template with Timber
-Timber::$dirname = array('templates', 'templates/blocks', 'templates/shortcode', 'templates/pages', 'templates/layouts', 'templates/views');
+Timber::$dirname = array('templates', 'templates/blocks', 'templates/shortcode', 'templates/pages', 'templates/layouts', 'templates/views', 'templates/forms');
 
 /**
  *
@@ -346,6 +346,16 @@ function flexible_content($name) {
       $fc_type[$layout] = array();
 
       switch ($layout) {
+        case 'test':
+          print_r($field);
+
+          try {
+            Timber::render($layout . '.twig', $field);
+          } catch (Exception $e) {
+            echo 'Could not find a twig file for layout type: ' . $layout . '<br>';
+          }
+          break;
+
         case 'map_block':
           $theme_options = get_option('s_vietnam_board_settings');
           $google_api_key = $theme_options['s_vietnam_google_api_key'];

@@ -1,0 +1,238 @@
+{{ hotel_name|print_r }}
+
+<form class="seller-add-hotel" action="" method="post" id="seller-add-hotel" name="seller-add-hotel">
+  {# =================================================================
+   #
+   # Hotel Information
+   #
+   # ===================================================================#}
+  <div class="hotel-information">
+    <h2>Hotel Information</h2>
+
+    <div class="form-item">
+      <input type="text" name="product_name" placeholder="Hotel Name">
+    </div>
+
+    <div class="form-item">
+      <div class="wrapper-more-media">
+        <style type="text/css">
+          .media-sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+          .media-sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 100px; height: 90px; font-size: 4em; text-align: center; }
+        </style>
+        <ul class="media-sortable">
+          <li class="btn btn-default media-item">1</li>
+          <li class="btn btn-default media-item">2</li>
+          <li class="btn btn-default media-item">3</li>
+          <li class="btn btn-default media-item">4</li>
+          <li class="btn btn-default media-item">5</li>
+          <li class="btn btn-default media-item">6</li>
+          <li class="btn btn-default media-item">7</li>
+          <li class="btn btn-default media-item">8</li>
+          <li class="btn btn-default media-item">9</li>
+          <li class="btn btn-default media-item">10</li>
+          <li class="btn btn-default media-item">11</li>
+          <li class="btn btn-default media-item">12</li>
+        </ul>
+        <a href="#" class="add-more-media">Add media</a>
+      </div>
+    </div>
+
+    <div class="form-item">
+      <input type="text" name="address" placeholder="Address">
+    </div>
+
+    <div class="form-item">
+      <input type="text" name="address_coordinates" placeholder="Address Coordinates">
+    </div>
+
+    <div class="form-item">
+      <input type="text" name="hotel_star" placeholder="Star">
+    </div>
+
+    <div class="form-item">
+      <input type="tel" name="hotline" placeholder="Phone">
+    </div>
+
+    <div class="form-item">
+      <input type="text" name="hotel_website" placeholder="Website">
+    </div>
+
+    <div class="form-item">
+      <input type="text" name="hotel_reservation_name" placeholder="Reservation Name">
+    </div>
+
+    <div class="form-item">
+      <input type="email" name="email" placeholder="Email Booking">
+    </div>
+
+    <div class="form-item">
+      <textarea name="description" placeholder="Overview"></textarea>
+    </div>
+
+    <div class="form-item">
+      <textarea name="cancellation_policy" placeholder="Cancellation Policy"></textarea>
+    </div>
+
+    <div class="form-item">
+      <textarea name="hotel_child_policy" placeholder="Child Policy"></textarea>
+    </div>
+
+    <div class="form-item">
+      <textarea name="hotel_promotion" placeholder="Promotion"></textarea>
+    </div>
+
+    <div class="form-item">
+      <textarea name="hotel_remarks" placeholder="Remarks"></textarea>
+    </div>
+    
+    <div class="form-item">
+      <div class="internet-access-service-wrapper wrapper-more-service">
+        <input type="text" placeholder="Internet Access" class="input-more-service" data-reference="internet_access_services">
+        <a href="#" class="add-more-service">Add more</a>
+      </div>
+    </div>
+
+    <div class="form-item">
+      <div class="relax-services-wrapper wrapper-more-service">
+        <input type="text" placeholder="Things To Do; Ways To Relax" class="input-more-service" data-reference="relax_services">
+        <a href="#" class="add-more-service">Add more</a>
+      </div>
+    </div>
+
+    <div class="form-item">
+      <div class="dining-drinking-snacking-services-wrapper wrapper-more-service">
+        <input type="text" placeholder="Dining, Drinking, And Snacking" class="input-more-service" data-reference="dining_drinking_snacking_services">
+        <a href="#" class="add-more-service">Add more</a>
+      </div>
+    </div>
+
+    <div class="form-item">
+      <div class="services-conveniences-services-wrapper wrapper-more-service">
+        <input type="text" placeholder="Services And Conveniences" class="input-more-service" data-reference="conveniences_services">
+        <a href="#" class="add-more-service">Add more</a>
+      </div>
+    </div>
+
+    <div class="form-item">
+      <div class="kids-services-wrapper wrapper-more-service">
+        <input type="text" placeholder="For The Kids" class="input-more-service" data-reference="kids_services">
+        <a href="#" class="add-more-service">Add more</a>
+      </div>
+    </div>
+
+    <div class="form-item">
+      <div class="getting-around-services-wrapper wrapper-more-service">
+        <input type="text" placeholder="Getting Around" class="input-more-service" data-reference="getting_around_services">
+        <a href="#" class="add-more-service">Add more</a>
+      </div>
+    </div>
+  </div>
+
+  {# =================================================================
+   #
+   # Room Information
+   #
+   # ===================================================================#}
+  <div class="rooms-information">
+    <h2>Rooms Information</h2>
+    <div class="rooms-clone">
+      <div class="form-item">
+        <input type="text" name="hotel_room_type" placeholder="Room Type">
+      </div>
+
+      <div class="form-item">
+        <input type="text" name="product_code" placeholder="Hotel Code">
+      </div>
+
+      <div class="form-item">
+        <input type="text" name="quantity_in_stock" placeholder="Number Of Available Room">
+      </div>
+
+      <div class="form-item">
+        <input type="checkbox" name="hotel_breakfast_included" id="hotel_breakfast_included"> <label for="hotel_breakfast_included">Breakfast Included</label>
+      </div>
+
+      <div class="form-item">
+        <input type="number" name="hotel_capacity_adult" placeholder="Capacity (Adult)" min="1">
+      </div>
+
+      <div class="form-item">
+        <input type="number" name="hotel_capacity_child" placeholder="Capacity (Child)" min="0">
+      </div>
+
+      <div class="form-item">
+        <div class="room-facilities-services-wrapper wrapper-more-service">
+          <input type="text" placeholder="Room Facilities" class="input-more-service" data-reference="room_facilities_services">
+          <a href="#" class="add-more-service">Add more</a>
+        </div>
+      </div>
+
+      <div class="form-item">
+        <input type="number" name="unit_price" placeholder="SGL NETT Price">
+      </div>
+
+      <div class="form-item">
+        <input type="number" name="custom_exchange_rate" placeholder="Custom Exchange Rate">
+      </div>
+
+      <div class="form-item">
+        <input type="number" name="benefit" placeholder="Benefit">
+      </div>
+
+      <div class="form-item">
+        <input type="number" name="extra_bed_nett_price" placeholder="Extra Bed NETT Price">
+      </div>
+
+      <div class="form-item">
+        <input type="number" name="weekend_surcharge" placeholder="Weekend surcharge">
+      </div>
+
+      <div class="form-item">
+        <input type="number" name="asian_customer_nett_price" placeholder="Asian Customer Nett Price">
+      </div>
+
+      <div class="form-item">
+        <input type="number" name="westerner_customer_nett_price" placeholder="Westerner Customer Nett Price">
+      </div>
+
+      <div class="form-item">
+        <div class="room-facilities-services-wrapper wrapper-more-service">
+          <input type="text" placeholder="Room Facilities" class="input-more-service" data-reference="room_facilities_services">
+          <a href="#" class="add-more-service">Add more</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rooms-resuft"></div>
+    <a href="#" class="add-more-rooms">Add Room</a>
+  </div>
+
+  {# =================================================================
+   #
+   # Form hidden Information
+   #
+   # ===================================================================#}
+  <div class="form-hidden hidden">
+    <input type="hidden" name="product_category" value="hotel">
+    <input type="hidden" name="unit" value="room">
+    <input type="hidden" name="internet_access_services">
+    <input type="hidden" name="relax_services">
+    <input type="hidden" name="dining_drinking_snacking_services">
+    <input type="hidden" name="conveniences_services">
+    <input type="hidden" name="kids_services">
+    <input type="hidden" name="getting_around_services">
+    <input type="hidden" name="room_facilities_services">
+    <input type="hidden" name="hotel_price_public">
+    <input type="hidden" name="in_hotel" data-target="product_name">
+  </div>
+
+  {# =================================================================
+   #
+   # Form Actions
+   #
+   # ===================================================================#}
+  <div class="form-action">
+    <button type="sunmit" name="action" value="seller-add-hotel" class="btn btn-default">Send</button>
+    <button type="reset" class="btn btn-default">Reset</button>
+  </div>
+</form>

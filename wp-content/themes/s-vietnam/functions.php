@@ -23,6 +23,9 @@ require_once('init/options/option.php');
 if(!is_admin()) {
   // Add scripts
   function ct_libs_scripts() {
+    wp_register_script('lib-jqueryui', get_stylesheet_directory_uri() . '/dist/js/libs/jquery-ui.js', array('jquery'), FALSE, '1.12.1', TRUE);
+    wp_enqueue_script('lib-jqueryui');
+
     wp_register_script('lib-slick', get_stylesheet_directory_uri() . '/dist/js/libs/slick.js', array('jquery'), FALSE, '0.7.0', TRUE);
     wp_enqueue_script('lib-slick');
 
