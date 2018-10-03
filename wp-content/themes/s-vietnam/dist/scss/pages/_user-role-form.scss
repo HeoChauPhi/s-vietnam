@@ -8,7 +8,7 @@ form.user-role-form {
     position: relative;
   }
 
-  .media-sortable { 
+  .frontend-media-list { 
     list-style-type: none;
     margin: 0;
     overflow: hidden;
@@ -24,7 +24,7 @@ form.user-role-form {
       position: relative;
       width: rem(100px);
 
-      .media-delete-icon {
+      /* .media-delete-icon {
         color: $black;
         position: absolute;
         right: 0;
@@ -32,7 +32,7 @@ form.user-role-form {
         z-index: 1;
         font-size: 21px;
         cursor: pointer;
-      }
+      } */
     }
   }
 }

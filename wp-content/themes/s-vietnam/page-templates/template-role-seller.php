@@ -29,5 +29,7 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POST
   print_r($_POST);
 }
 
+$new_url = sanitize_title('đây là tiêu đề tiếng việt');
+  echo $new_url;
 
 Timber::render( 'template-role-seller.twig', $context );
